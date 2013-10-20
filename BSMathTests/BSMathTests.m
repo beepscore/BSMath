@@ -27,11 +27,31 @@
     [super tearDown];
 }
 
-- (void)testTriangleNumber
+- (void)testTriangleNumberOne
 {
     NSUInteger expectedResult = 1;
-    NSUInteger actualResult = [BSMath triangleNumber:1 errorPointer:nil];
+
+    NSError *anError = nil;
+    NSUInteger actualResult = [BSMath triangleNumber:1 errorPointer:&anError];
+
     XCTAssertEqual(expectedResult, actualResult, @"");
+    XCTAssertNil(anError, @"");
+}
+
+- (void)testTriangleNumberZero
+{
+    NSUInteger expectedResult = 0;
+
+    NSError *anError = nil;
+    NSUInteger actualResult = [BSMath triangleNumber:0 errorPointer:&anError];
+
+    XCTAssertEqual(expectedResult, actualResult, @"");
+
+    // test anError
+    XCTAssertNotNil(anError, @"expected anError not nil");
+    XCTAssertEqualObjects(@"BSMath", anError.domain, @"");
+    XCTAssertEqual(1, anError.code, @"");
+    XCTAssertEqualObjects(@"anInt equal 0", anError.userInfo[NSLocalizedDescriptionKey], @"");
 }
 
 @end
