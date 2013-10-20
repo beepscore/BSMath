@@ -53,6 +53,40 @@
     }
 }
 
+- (void)testTriangleNumberAlmostTooBig
+{
+    // Check system defined constant equals what we think it equals
+    // http://stackoverflow.com/questions/2107544/types-in-objective-c-on-iphone
+    // max size varies by device e.g. 64 bit
+    XCTAssertEqual(2147483647, INT_MAX, @"");
+
+    NSUInteger bigInt = (NSUInteger)(sqrt(2) * sqrt(INT_MAX));
+
+    // must cast type to get assertion to pass
+    XCTAssertEqual((NSUInteger)65535, bigInt, @"");
+
+    NSArray *testValues = @[
+                            @{@65535: @2147450880},
+                            @{@65536: @2147516416}
+                            ];
+
+    for (NSDictionary *valueDict in testValues) {
+
+        NSError *anError = nil;
+        NSNumber *key = [[valueDict allKeys] firstObject];
+        NSUInteger expectedResult = (NSUInteger)[valueDict[key] integerValue];
+
+        NSUInteger keyValue = (NSUInteger)[key integerValue];
+        NSLog(@"anInt: %lu, expectedResult: %lu",
+              (unsigned long)keyValue, (unsigned long)expectedResult);
+        NSUInteger actualResult = [BSMath triangleNumber:keyValue
+                                            errorPointer:&anError];
+
+        XCTAssertEqual(expectedResult, actualResult, @"anInt: %lu", (unsigned long)keyValue);
+        XCTAssertNil(anError, @"");
+    }
+}
+
 - (void)testTriangleNumberZero
 {
     NSUInteger expectedResult = 0;
