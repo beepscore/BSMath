@@ -11,6 +11,13 @@
 @interface BSMath : NSObject
 
 /**
+ Triangle number of n is number of "dots" needed to fill an equilateral triangle of side n.
+ Equals sum of natural numbers from 1 to n.
+
+ References:
+ https://en.wikipedia.org/wiki/Triangular_number
+ http://www.cimgf.com/2008/04/04/cocoa-tutorial-using-nserror-to-great-effect/
+
  Example usage
      NSError *myError = nil;
      NSUInteger result = [BSMath triangleNumber:myInt errorPointer:&myError];
