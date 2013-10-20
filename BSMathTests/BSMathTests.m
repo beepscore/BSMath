@@ -27,26 +27,29 @@
     [super tearDown];
 }
 
-- (void)testTriangleNumberOne
+- (void)testTriangleNumbers
 {
-    NSUInteger expectedResult = 1;
+    NSArray *testValues = @[
+                            @{@1: @1},
+                            @{@2: @3},
+                            @{@3: @6},
+                            @{@4: @10},
+                            @{@5: @15},
+                            ];
 
-    NSError *anError = nil;
-    NSUInteger actualResult = [BSMath triangleNumber:1 errorPointer:&anError];
+    for (NSDictionary *valueDict in testValues) {
 
-    XCTAssertEqual(expectedResult, actualResult, @"");
-    XCTAssertNil(anError, @"");
-}
+        NSError *anError = nil;
+        NSNumber *key = [[valueDict allKeys] firstObject];
+        NSUInteger expectedResult = [valueDict[key] integerValue];
 
-- (void)testTriangleNumberTwo
-{
-    NSUInteger expectedResult = 3;
+        NSUInteger keyValue = [key integerValue];
+        NSUInteger actualResult = [BSMath triangleNumber:keyValue
+                                            errorPointer:&anError];
 
-    NSError *anError = nil;
-    NSUInteger actualResult = [BSMath triangleNumber:2 errorPointer:&anError];
-
-    XCTAssertEqual(expectedResult, actualResult, @"");
-    XCTAssertNil(anError, @"");
+        XCTAssertEqual(expectedResult, actualResult, @"");
+        XCTAssertNil(anError, @"");
+    }
 }
 
 - (void)testTriangleNumberZero
