@@ -38,6 +38,17 @@
     XCTAssertNil(anError, @"");
 }
 
+- (void)testTriangleNumberTwo
+{
+    NSUInteger expectedResult = 3;
+
+    NSError *anError = nil;
+    NSUInteger actualResult = [BSMath triangleNumber:2 errorPointer:&anError];
+
+    XCTAssertEqual(expectedResult, actualResult, @"");
+    XCTAssertNil(anError, @"");
+}
+
 - (void)testTriangleNumberZero
 {
     NSUInteger expectedResult = 0;
