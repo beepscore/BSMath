@@ -22,6 +22,10 @@
 		DE228E3218143C6700F69312 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE228E1118143C6600F69312 /* UIKit.framework */; };
 		DE228E3A18143C6700F69312 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DE228E3818143C6700F69312 /* InfoPlist.strings */; };
 		DE228E3C18143C6700F69312 /* BSMathTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DE228E3B18143C6700F69312 /* BSMathTests.m */; };
+		DE470D8C18143E0A00793DCC /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = DE470D8B18143E0A00793DCC /* README.md */; };
+		DE470D8D18143E0A00793DCC /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = DE470D8B18143E0A00793DCC /* README.md */; };
+		DE470D8F18143E1600793DCC /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = DE470D8E18143E1600793DCC /* LICENSE.txt */; };
+		DE470D9018143E1600793DCC /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = DE470D8E18143E1600793DCC /* LICENSE.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,8 @@
 		DE228E3718143C6700F69312 /* BSMathTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BSMathTests-Info.plist"; sourceTree = "<group>"; };
 		DE228E3918143C6700F69312 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DE228E3B18143C6700F69312 /* BSMathTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSMathTests.m; sourceTree = "<group>"; };
+		DE470D8B18143E0A00793DCC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		DE470D8E18143E1600793DCC /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +90,8 @@
 		DE228E0118143C6600F69312 = {
 			isa = PBXGroup;
 			children = (
+				DE470D8B18143E0A00793DCC /* README.md */,
+				DE470D8E18143E1600793DCC /* LICENSE.txt */,
 				DE228E1318143C6600F69312 /* BSMath */,
 				DE228E3518143C6700F69312 /* BSMathTests */,
 				DE228E0C18143C6600F69312 /* Frameworks */,
@@ -232,8 +240,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE470D8F18143E1600793DCC /* LICENSE.txt in Resources */,
 				DE228E2418143C6600F69312 /* Main_iPad.storyboard in Resources */,
 				DE228E2918143C6600F69312 /* Images.xcassets in Resources */,
+				DE470D8C18143E0A00793DCC /* README.md in Resources */,
 				DE228E2118143C6600F69312 /* Main_iPhone.storyboard in Resources */,
 				DE228E1818143C6600F69312 /* InfoPlist.strings in Resources */,
 			);
@@ -243,6 +253,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE470D9018143E1600793DCC /* LICENSE.txt in Resources */,
+				DE470D8D18143E0A00793DCC /* README.md in Resources */,
 				DE228E3A18143C6700F69312 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -475,6 +487,7 @@
 				DE228E4118143C6700F69312 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DE228E4218143C6700F69312 /* Build configuration list for PBXNativeTarget "BSMathTests" */ = {
 			isa = XCConfigurationList;
@@ -483,6 +496,7 @@
 				DE228E4418143C6700F69312 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
