@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "BSMath.h"
 
 @interface BSMathTests : XCTestCase
 
@@ -24,6 +25,13 @@
 {
     // Put teardown code here. This method is called after the invocation of each test method in the class.
     [super tearDown];
+}
+
+- (void)testTriangleNumber
+{
+    NSUInteger expectedResult = 1;
+    NSUInteger actualResult = [BSMath triangleNumber:1 errorPointer:nil];
+    XCTAssertEqual(expectedResult, actualResult, @"");
 }
 
 @end

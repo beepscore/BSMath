@@ -26,6 +26,8 @@
 		DE470D8D18143E0A00793DCC /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = DE470D8B18143E0A00793DCC /* README.md */; };
 		DE470D8F18143E1600793DCC /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = DE470D8E18143E1600793DCC /* LICENSE.txt */; };
 		DE470D9018143E1600793DCC /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = DE470D8E18143E1600793DCC /* LICENSE.txt */; };
+		DEFA87011814404000298AFA /* BSMath.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFA87001814404000298AFA /* BSMath.m */; };
+		DEFA87021814404000298AFA /* BSMath.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFA87001814404000298AFA /* BSMath.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		DE228E3B18143C6700F69312 /* BSMathTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSMathTests.m; sourceTree = "<group>"; };
 		DE470D8B18143E0A00793DCC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		DE470D8E18143E1600793DCC /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		DEFA86FF1814404000298AFA /* BSMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSMath.h; sourceTree = "<group>"; };
+		DEFA87001814404000298AFA /* BSMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSMath.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +130,8 @@
 				DE228E1D18143C6600F69312 /* BSAppDelegate.m */,
 				DE228E1F18143C6600F69312 /* Main_iPhone.storyboard */,
 				DE228E2218143C6600F69312 /* Main_iPad.storyboard */,
+				DEFA86FF1814404000298AFA /* BSMath.h */,
+				DEFA87001814404000298AFA /* BSMath.m */,
 				DE228E2518143C6600F69312 /* BSViewController.h */,
 				DE228E2618143C6600F69312 /* BSViewController.m */,
 				DE228E2818143C6600F69312 /* Images.xcassets */,
@@ -268,6 +274,7 @@
 			files = (
 				DE228E2718143C6600F69312 /* BSViewController.m in Sources */,
 				DE228E1A18143C6600F69312 /* main.m in Sources */,
+				DEFA87011814404000298AFA /* BSMath.m in Sources */,
 				DE228E1E18143C6600F69312 /* BSAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEFA87021814404000298AFA /* BSMath.m in Sources */,
 				DE228E3C18143C6700F69312 /* BSMathTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
