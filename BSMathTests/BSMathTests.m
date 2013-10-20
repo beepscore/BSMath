@@ -67,7 +67,8 @@
 
     NSArray *testValues = @[
                             @{@65535: @2147450880},
-                            @{@65536: @2147516416}
+                            @{@65536: @2147516416},
+                            @{@65537: @2147581953}
                             ];
 
     for (NSDictionary *valueDict in testValues) {
