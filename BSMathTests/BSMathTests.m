@@ -35,6 +35,7 @@
                             @{@3: @6},
                             @{@4: @10},
                             @{@5: @15},
+                            @{@10: @55},
                             ];
 
     for (NSDictionary *valueDict in testValues) {
