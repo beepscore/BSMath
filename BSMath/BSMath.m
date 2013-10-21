@@ -48,6 +48,8 @@
     // x_max approx = sqrt(2*MAXIMUM)
     // x_max approx = sqrt(2) * sqrt(MAXIMUM)
 
+    // Empirically determined maximum input is 131071
+    // (INT_MAX / 2**14) = (INT_MAX / 16384) = 131071
     // TODO:
     /*
     if (anInt > (sqrt(2) * sqrt(INT_MAX))) {
