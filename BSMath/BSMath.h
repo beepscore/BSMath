@@ -29,13 +29,14 @@
         NSUInteger myValidResult = result;
      }
 
- @param triangleNumber is an NSUInteger
+ @param triangleNumber
  If it is 0 the method returns 0 and sets an error.
  If it is greater than or equal to 2**17 = 131072 the method returns 0 and sets an error.
  The result would be larger than type NSUInteger could hold.
 
- @param errorPointer is type NSError **, the address of an NSError object
- if the method encounters an error, it can dereference &myError to set myError
+ @param errorPointer
+ Type NSError ** is the address of an NSError object
+ If the method encounters an error, it can dereference &myError to set myError
 
  @return a triangleNumber
  */
