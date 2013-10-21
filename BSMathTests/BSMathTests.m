@@ -94,6 +94,24 @@
     }
 }
 
+- (void)testTriangleNumberTooBig
+{
+
+    NSError *anError = nil;
+    NSUInteger actualResult = [BSMath triangleNumber:131072
+                                        errorPointer:&anError];
+
+    NSUInteger expectedResult = 0;
+
+    XCTAssertEqual(expectedResult, actualResult, @"");
+
+    // test anError
+    XCTAssertNotNil(anError, @"expected anError not nil");
+    XCTAssertEqualObjects(@"BSMath", anError.domain, @"");
+    XCTAssertEqual(2, anError.code, @"");
+    XCTAssertEqualObjects(@"anInt too big, result would overflow", anError.userInfo[NSLocalizedDescriptionKey], @"");
+}
+
 - (void)testTriangleNumberZero
 {
     NSUInteger expectedResult = 0;

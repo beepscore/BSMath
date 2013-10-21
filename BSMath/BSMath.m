@@ -50,15 +50,12 @@
 
     // Empirically determined maximum input is 131071
     // (INT_MAX / 2**14) = (INT_MAX / 16384) = 131071
-    // TODO:
-    /*
-    if (anInt > (sqrt(2) * sqrt(INT_MAX))) {
+    if (anInt > 131071) {
         NSMutableDictionary *userInfo = [NSMutableDictionary dictionary];
         [userInfo setValue:@"anInt too big, result would overflow" forKey:NSLocalizedDescriptionKey];
         *errorPointer = [NSError errorWithDomain:@"BSMath" code:2 userInfo:userInfo];
         return 0;
     }
-    */
 
     // As a boy Gauss famously calculated sum of 1..n by pairing numbers.
     // We could calculate the average value as (n + 1)/2 and multiply it by the number of elements n.
