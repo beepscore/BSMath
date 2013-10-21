@@ -48,9 +48,9 @@
     // x_max approx = sqrt(2*MAXIMUM)
     // x_max approx = sqrt(2) * sqrt(MAXIMUM)
 
-    // Empirically determined maximum input is 131071
+    // Empirically determined maximum input is 2**17 - 1 = 131071
     // (INT_MAX / 2**14) = (INT_MAX / 16384) = 131071
-    if (anInt > 131071) {
+    if (anInt >= 131072) {
         NSMutableDictionary *userInfo = [NSMutableDictionary dictionary];
         [userInfo setValue:@"anInt too big, result would overflow" forKey:NSLocalizedDescriptionKey];
         *errorPointer = [NSError errorWithDomain:@"BSMath" code:2 userInfo:userInfo];

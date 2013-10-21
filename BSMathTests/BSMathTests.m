@@ -60,8 +60,9 @@
     // max size varies by device e.g. 64 bit
     XCTAssertEqual(2147483647, INT_MAX, @"");
 
+    // use analytically estimated bigInt as a starting value for tests
     NSUInteger bigInt = (NSUInteger)(sqrt(2) * sqrt(INT_MAX));
-
+    // 2**16 = 65536
     // must cast type to get assertion to pass
     XCTAssertEqual((NSUInteger)65535, bigInt, @"");
 
@@ -69,11 +70,9 @@
                             @{@65535: @2147450880},
                             @{@65536: @2147516416},
                             @{@65537: @2147581953},
-                            @{@65538: @2147647491},
 
-                            @{@131070: @4294770689},
                             @{@131071: @4294901760},
-                            // input value 131072 is too big, result overflows
+                            // input value 2**17 = 131072 is too big, result overflows
                             // @{@131072: @65536},
                             ];
 
@@ -98,6 +97,7 @@
 {
 
     NSError *anError = nil;
+    // 2**17 = 131072
     NSUInteger actualResult = [BSMath triangleNumber:131072
                                         errorPointer:&anError];
 
