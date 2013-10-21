@@ -83,8 +83,8 @@
         NSUInteger expectedResult = (NSUInteger)[valueDict[key] integerValue];
 
         NSUInteger keyValue = (NSUInteger)[key integerValue];
-        NSLog(@"anInt: %lu, expectedResult: %lu",
-              (unsigned long)keyValue, (unsigned long)expectedResult);
+        // NSLog(@"anInt: %lu, expectedResult: %lu",
+        //       (unsigned long)keyValue, (unsigned long)expectedResult);
         NSUInteger actualResult = [BSMath triangleNumber:keyValue
                                             errorPointer:&anError];
 
